@@ -1,4 +1,4 @@
-<!doctype>
+<!doctype html>
 <html>
 	<head>
 		<title>Error example</title>
@@ -9,8 +9,10 @@
 		<script src="/jspm_packages/system.js"></script>
 		<script src="/config.js"></script>
 		<script>
-			System.import("./js/main");
+			System.import('babel/polyfill')
+				.then(function() {
+					return System.import("./js/main")
+				});
 		</script>
 	</body>
 </html>
-
